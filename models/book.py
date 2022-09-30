@@ -6,3 +6,15 @@ class Book:
         self.title = title
         self.author = author
         self.genre = genre
+        self.books = []
+
+    # Add a book to book list
+    def save_book(self, new_book):
+        self.books.append(new_book)
+
+    # Remove a book from the book list
+    def delete_book(self, book_name):
+        self.books.remove(book_name)
+
+    def count_books(self):
+        return len(self.books)
