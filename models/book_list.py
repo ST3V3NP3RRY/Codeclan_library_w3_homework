@@ -1,6 +1,6 @@
 from models.book import *
 
-book1 = Book("The Lord of the Rings", "J R R Tolkien", "Fanatasy")
+book1 = Book("The Lord of the Rings", "J R R Tolkien", "Fantasy")
 book2 = Book("The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi")
 book3 = Book("Dune", "Frank Herbert", "Sci-Fi")
 book4 = Book("Wolf Hall", "Hilary Mantel", "Historical Fiction")
