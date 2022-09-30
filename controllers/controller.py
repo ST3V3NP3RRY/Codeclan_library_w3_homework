@@ -14,3 +14,9 @@ def index():
 @app.route("/books")
 def current_books():
     return render_template("books.html", books=books)
+
+
+# current books in library route
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")

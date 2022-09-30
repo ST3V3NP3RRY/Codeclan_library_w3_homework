@@ -13,12 +13,12 @@ html {
 body {
   background-image: url(/static/images/book_background.jpg);
   background-position: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 main {
   max-width: 70%;
-  border: 1px solid green;
   margin: 0 auto;
 }
 
@@ -34,6 +34,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+h1,
+h2 {
+  font-family: Oswald, sans-serif;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 6rem;
+  text-align: center;
 }
 
 nav > ul {
@@ -55,10 +66,36 @@ nav > ul > li > a {
 /* ----------- Current book styling ------------- */
 
 .library_books {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 3rem;
+  background-color: #fff;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 100rem;
+}
+
+.book_container {
+  border-left: 0.5rem solid red;
+  background-color: rgb(249, 242, 238);
+  padding: 2rem;
+}
+
+.book_container > p {
+  padding-left: 2rem;
 }
 
 /* ----------- End of current book styling ------------- */
+
+/* ----------- Contact page styling ------------- */
+
+.contact_container {
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+/* ----------- End of Contact page styling ------------- */
 
 /* ----------- Footer styles ------------- */
 
