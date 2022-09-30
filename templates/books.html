@@ -1,17 +1,53 @@
 {% extends "base.html" %} {% block content %}
-
 <h2>Our current books</h2>
 
-<!-- Loop through the books in library and display the info on page -->
 
-<div class="library_books">
-  {% for book in books %}
-  <div class="book_container">
-    <p class="book_title">Title: {{ book.title }}</p>
-    <p class="book_author">Author: {{ book.author }}</p>
-    <p class="book_genre">Genre: {{ book.genre }}</p>
-  </div>
-  {% endfor %}
+  
+  <h3>Add a new book to the library</h3>
+  <div class="form_container">
+
+  <form class="add_book_form" action="" method="post">
+    <div>
+      <label for="title">Book title:</label>
+      <input id="title" type="text" name="title" />
+    </div>
+
+    <div>
+      <label for="author">Author:</label>
+      <input id="author" type="text" name="author" />
+    </div>
+
+    <!-- <div>
+      <label for="checked_out">Checked Out?:</label>
+      <input
+        id="checked_out"
+        type="checkbox"
+        name="checked_out"
+        value="False"
+      />
+    </div> -->
+  
+    <div>
+      <label for="genre">Genre:</label>
+      <input id="genre" type="text" name="genre" />
+    </div>
+    <input class="submit_btn btn" type="submit" value="Add" />
+
+  </form>
+</div> <!--- form_container --->
+
+    <!-- Loop through the books in library and display the info on page -->
+
+    <div class="library_books">
+      {% for book in books %}
+      <div class="book_container">
+        <p class="book_title">Title: {{ book.title }}</p>
+        <p class="book_author">Author: {{ book.author }}</p>
+        <p class="book_genre">Genre: {{ book.genre }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% endblock %}
+  </form>
 </div>
-
-{% endblock %}

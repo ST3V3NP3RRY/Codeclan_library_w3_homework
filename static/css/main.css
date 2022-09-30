@@ -44,9 +44,16 @@ h2 {
 h2 {
   margin: 2rem 0;
   font-size: 6rem;
+}
+
+h2,
+h3 {
   text-align: center;
 }
 
+h3 {
+  margin-bottom: 1rem;
+}
 nav > ul {
   display: flex;
   gap: 2rem;
@@ -94,50 +101,68 @@ nav > ul > li > a:hover {
   cursor: pointer;
 }
 
-/* ----------- End of home Page styles ------------- */
+/* ---- End of home Page styles ----- */
 
-/* ----------- Current book styling ------------- */
+/* ---- book page styles ---- */
+
+.form_container,
+.library_books {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 100rem;
+  margin: 0 auto 4rem auto;
+}
+
+.form_container {
+  border: 2px solid red;
+}
+
+.add_book_form {
+  display: flex;
+  gap: 1rem;
+}
+
+.add_book_form > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+}
 
 .library_books {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   gap: 3rem;
-  background-color: #fff;
-  padding: 3rem;
-  margin: 0 auto;
-  max-width: 100rem;
 }
 
 .book_container {
   border-left: 0.5rem solid red;
   background-color: rgb(249, 242, 238);
   padding: 2rem;
+  width: 100%;
 }
 
 .book_container > p {
   padding-left: 2rem;
 }
 
-/* ----------- End of current book styling ------------- */
+/* ---- End of book page styles ---- */
 
-/* ----------- Contact page styling ------------- */
+/* ---- Contact page styles ---- */
 
 .contact_container {
   max-width: 66rem;
   margin: 0 auto;
 }
 
-/* ----------- End of Contact page styling ------------- */
+/* ---- End of Contact page styles ---- */
 
-/* ----------- Footer styles ------------- */
+/* ---- Footer styles ---- */
 
 footer {
   background-color: red;
   color: #fff;
   height: 10vh;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -157,4 +182,4 @@ footer {
   color: white;
 }
 
-/* ----------- End of Footer styles ------------- */
+/* ---- End of Footer styles ---- */

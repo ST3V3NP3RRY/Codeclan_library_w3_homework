@@ -16,6 +16,20 @@ def current_books():
     return render_template("books.html", books=books)
 
 
+# New route for form data to add a book
+@app.route("/books", methods=["POST"])
+def add_book():
+    title = request.form["title"]
+    author = request.form["author"]
+    genre = request.form["genre"]
+    # checked_out = request.form(["checked_out"])
+
+    new_book = Book(title, author, genre)
+
+    save_book(new_book)
+    return redirect("/books")
+
+
 # current books in library route
 @app.route("/contact")
 def contact():

@@ -9,3 +9,8 @@ book6 = Book("The Shining", "Stephen King", "Horror")
 
 
 books = [book1, book2, book3, book4, book5, book6]
+
+# Function to add a new book to list
+# REMEMBER - functions need to be tested
+def save_book(new_book):
+    books.append(new_book)
