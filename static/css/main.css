@@ -1,0 +1,84 @@
+/* CSS reset browser default values */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------- Main styles ------------- */
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  background-image: url(/static/images/book_background.jpg);
+  background-position: center;
+  font-size: 2rem;
+}
+
+/* ----------- End of Main styles ------------- */
+
+/* ----------- Header styles ------------- */
+
+header {
+  background-color: red;
+  color: #fff;
+  height: 10vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ----------- End of Header styles ------------- */
+
+/* ----------- Current book styling ------------- */
+
+.library_books {
+  display: flex;
+}
+
+/* ----------- End of current book styling ------------- */
+
+/* ----------- Footer styles ------------- */
+
+footer {
+  background-color: red;
+  color: #fff;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social_icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.social_icons > a {
+  color: white;
+}
+
+/* ----------- End of Footer styles ------------- */

@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Our current books</h1>
+
+<!-- Loop through the books in library and display the info on page -->
+{% for book in books %}
+<div class="library_books">
+  <p class="book_title">Title:{{ book.title }}</p>
+  <p class="book_author">Author:{{ book.author }}</p>
+  <p class="book_genre">Genre:{{ book.genre }}</p>
+</div>
+
+{% endfor %} {% endblock %}
