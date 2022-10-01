@@ -1,11 +1,30 @@
 from models.book import *
+import datetime
 
-book1 = Book("The Lord of the Rings", "J R R Tolkien", "Fantasy", True)
-book2 = Book("The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi", False)
-book3 = Book("Dune", "Frank Herbert", "Sci-Fi", True)
-book4 = Book("Wolf Hall", "Hilary Mantel", "Historical Fiction", False)
-book5 = Book("1984", "George Orwell", "Dystopian", True)
-book6 = Book("The Shining", "Stephen King", "Horror", True)
+book1 = Book(
+    "The Lord of the Rings",
+    "J R R Tolkien",
+    "Fantasy",
+    True,
+    datetime.date(2022, 10, 14),
+)
+book2 = Book(
+    "The Hitchhiker's Guide to The Galaxy",
+    "Douglas Adams",
+    "Sci-Fi",
+    False,
+    datetime.date(2022, 10, 7),
+)
+book3 = Book("Dune", "Frank Herbert", "Sci-Fi", True, datetime.date(2022, 10, 2))
+book4 = Book(
+    "Wolf Hall",
+    "Hilary Mantel",
+    "Historical Fiction",
+    False,
+    datetime.date(2022, 10, 19),
+)
+book5 = Book("1984", "George Orwell", "Dystopian", True, datetime.date(2022, 10, 7))
+book6 = Book("The Shining", "Stephen King", "Horror", True, datetime.date(2022, 10, 2))
 
 
 books = [book1, book2, book3, book4, book5, book6]

@@ -23,8 +23,18 @@ def add_book():
     author = request.form["author"]
     genre = request.form["genre"]
     checked_out = True if "checked_out" in request.form else False
+    date = request.form["date"]
+    split_date = date.split("-")
+    # Reassign date variables value
+    date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
 
-    new_book = Book(title=title, author=author, genre=genre, checked_out=checked_out)
+    new_book = Book(
+        title=title,
+        author=author,
+        genre=genre,
+        checked_out=checked_out,
+        return_date=date,
+    )
 
     save_book(new_book)
     return redirect("/books")

@@ -1,15 +1,24 @@
 import unittest
 from models.book import Book
 from models.book_list import *
+import datetime
 
 
 class TestBook(unittest.TestCase):
     def setUp(self):
-        self.book = Book("Dune", "Frank Herbert", "Sci-Fi", True)
-        self.book1 = Book(
-            "The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi", False
+        self.book = Book(
+            "Dune", "Frank Herbert", "Sci-Fi", True, datetime.date(2022, 10, 14)
         )
-        self.book2 = Book("1984", "George Orwell", "Dystopian", True)
+        self.book1 = Book(
+            "The Hitchhiker's Guide to The Galaxy",
+            "Douglas Adams",
+            "Sci-Fi",
+            False,
+            datetime.date(2022, 10, 7),
+        )
+        self.book2 = Book(
+            "1984", "George Orwell", "Dystopian", True, datetime.date(2022, 10, 19)
+        )
 
         self.books = []
 
@@ -40,4 +49,8 @@ class TestBook(unittest.TestCase):
 
     @unittest.skip("delete this line to run the test")
     def test_book_can_be_checked_out(self):
+        pass
+
+    @unittest.skip("delete this line to run the test")
+    def test_book_has_return_date(self):
         pass

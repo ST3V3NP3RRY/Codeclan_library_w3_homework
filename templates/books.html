@@ -31,6 +31,11 @@
         value="False"
       />
     </div>
+
+    <div>
+      <label for="date">Return date:</label>
+      <input type="date" name="date" id="date">
+    </div>
   
     
     <input class="submit_btn btn" type="submit" value="Add" />
@@ -49,7 +54,7 @@
         
         {% if book.checked_out %}
           <!-- Add return by date below -->
-          <p><i> Status: Sorry this book is out at the moment. </i></p>
+          <p><i> This book is checkout. return date: {{ book.return_date.strftime("%b %d %Y") }} </i></p>
           {% endif %}
         
           <a href="/books/{{books.index(book)}}">View book</a>
