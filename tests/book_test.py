@@ -44,8 +44,9 @@ class TestBook(unittest.TestCase):
         self.assertEqual(0, len(self.books))
 
     def test_book_has_return_date(self):
-        self.assertEqual(2022, 10, 7, self.book.return_date)
+        self.assertEqual(datetime.date(2022, 10, 14), self.book.return_date)
 
+    @unittest.skip("delete this line to run the test")
     def test_can_remove_book_by_title(self):
         pass
 
