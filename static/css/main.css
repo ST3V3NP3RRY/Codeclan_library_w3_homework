@@ -90,66 +90,97 @@ nav > ul > li > a:hover {
   margin: 0 auto;
 }
 
-.btn {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 2.5rem;
-  border-radius: 0.5rem;
-}
-
-.btn:hover {
-  background-color: rgb(179, 3, 3);
-  cursor: pointer;
-}
-
 /* ---- End of home Page styles ----- */
 
-/* ---- book page styles ---- */
+/* ---- book and form styles ---- */
 
-.form_container,
-.library_books {
-  background-color: #fff;
-  padding: 2rem;
-  max-width: 100rem;
-  margin: 0 auto 4rem auto;
+.form_and_books_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .form_container {
-  border: 2px solid red;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .add_book_form {
   display: flex;
-  gap: 1rem;
-}
-
-.add_book_form > div {
-  display: flex;
   flex-direction: column;
-  flex: 1 0 0;
+  gap: 2rem;
 }
 
-.library_books {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: 3rem;
+.form_textfields_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.book_container {
-  border-left: 0.5rem solid red;
-  background-color: rgb(249, 242, 238);
-  padding: 2rem;
+.flex_grow {
+  flex: 1 0 auto;
+}
+
+.checkbox_date_container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox_align,
+.date_align {
+  display: flex;
+}
+
+.checkbox_align > label,
+.date_align > label {
+  flex: 0 0 auto;
+}
+
+.checkbox_align > input {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+.date_align > input {
+  margin-left: 1.5rem;
+}
+
+input {
   width: 100%;
+  height: 3rem;
 }
 
-.book_container > p {
-  padding-left: 2rem;
+label {
+  display: block;
 }
 
-/* ---- End of book page styles ---- */
+.form_btn {
+  background-color: red;
+  color: white;
+  border: none;
+  width: 15rem;
+  height: auto;
+  padding: 8px 16px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form_btn:hover {
+  background-color: rgb(179, 3, 3);
+  cursor: pointer;
+}
+
+/* ---- End of book and form styles ---- */
 
 /* ---- Contact page styles ---- */
 

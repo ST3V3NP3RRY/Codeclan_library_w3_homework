@@ -1,72 +1,87 @@
 {% extends "base.html" %} {% block content %}
+
 <h2>Our current books</h2>
-
-
-  
-  <h3>Add a new book to the library</h3>
+<div class="form_and_books_container">
   <div class="form_container">
+    <h3>Add a new book to the library</h3>
 
-  <form class="add_book_form" action="" method="post">
-    <div>
-      <label for="title">Book title:</label>
-      <input id="title" type="text" name="title" />
-    </div>
+    <form class="add_book_form" action="" method="post">
+      <div class="form_textfields_container">
+        <div class="flex_grow">
+          <label for="title">Book title:</label>
+          <input id="title" type="text" name="title" />
+        </div>
 
-    <div>
-      <label for="author">Author:</label>
-      <input id="author" type="text" name="author" />
-    </div>
-    
-    <div>
-      <label for="genre">Genre:</label>
-      <input id="genre" type="text" name="genre" />
-    </div>
+        <div class="flex_grow">
+          <label for="author">Author:</label>
+          <input id="author" type="text" name="author" />
+        </div>
 
-    <div>
-      <label for="checked_out">Check Out:</label>
-      <input
-        id="checked_out"
-        type="checkbox"
-        name="checked_out"
-        value="False"
-      />
-    </div>
-
-    <div>
-      <label for="date">Return date:</label>
-      <input type="date" name="date" id="date">
-    </div>
-  
-    
-    <input class="submit_btn btn" type="submit" value="Add" />
-    
-  </form>
-</div> <!--- form_container --->
-
-    <!-- Loop through the books in library and display the info on page -->
-
-    <div class="library_books">
-      {% for book in books %}
-      <div class="book_container">
-        <p class="book_title">Title: {{ book.title }}</p>
-        <p class="book_author">Author: {{ book.author }}</p>
-        <p class="book_genre">Genre: {{ book.genre }}</p>
-        
-        {% if book.checked_out %}
-          <!-- Add return by date below -->
-          <p><i> This book is checkout. return date: {{ book.return_date.strftime("%b %d %Y") }} </i></p>
-          {% endif %}
-        
-          <a href="/books/{{books.index(book)}}">View book</a>
-        
-        <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
-          <input type="submit" value="Delete">
-        </form>
+        <div class="flex_grow">
+          <label for="genre">Genre:</label>
+          <input id="genre" type="text" name="genre" />
+        </div>
       </div>
-      
-      {% endfor %}
-    </div>
+      <!--- end of form_textfields_container --->
 
-    {% endblock %}
-  </form>
+      <div class="checkbox_date_container">
+        <div class="checkbox_align">
+          <label for="checked_out">Check Out: </label>
+          <input
+            id="checked_out"
+            type="checkbox"
+            name="checked_out"
+            value="False"
+          />
+        </div>
+
+        <div class="date_align">
+          <label for="date">Return date:</label>
+          <input type="date" name="date" id="date" />
+        </div>
+
+        <input class="form_btn" type="submit" value="Add" />
+      </div>
+      <!--- checkbox_date_container end --->
+    </form>
+    <!-- add_book_form end-->
+  </div>
+  <!--- form_container end --->
+
+  <div class="books_container">
+    {% for book in books %}
+
+    <div class="book_container">
+      <p class="book_title">Title: {{ book.title }}</p>
+      <p class="book_author">Author: {{ book.author }}</p>
+      <p class="book_genre">Genre: {{ book.genre }}</p>
+
+      {% if book.checked_out %}
+      <p>
+        <i>
+          This book is checkout. return date: {{ book.return_date.strftime("%b
+          %d %Y") }}
+        </i>
+      </p>
+      {% endif %}
+
+      <a href="/books/{{books.index(book)}}">View book</a>
+
+      <!--- Delete button --->
+      <form
+        class="form-inline"
+        action="/books/delete/{{ book.  title }}"
+        method="POST"
+      >
+        <input class="form_btn" type="submit" value="Delete" />
+      </form>
+    </div>
+    <!--- book_container end --->
+
+    {% endfor %}
+  </div>
+  <!-- books_container end -->
 </div>
+<!-- form and books container end -->
+
+{% endblock %}
