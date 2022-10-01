@@ -1,17 +1,36 @@
 {% extends "base.html" %} {% block content %}
 
-<h2>Contact us</h2>
 <div class="contact_container">
-  <p>
-    Get in touch by filling in the form below. If you would like to request a
-    certain book, complete that section of the form. We'll do our best to source
-    it for you and let you know if we can locate it.
-  </p>
+  <h2>Get in touch</h2>
+  <div class="contact_form_container">
+    <p>
+      If you would like to request a book that's not in our library, complete the form below. We'll do our very best to source it for you.
+    </p>
 
-  <form action="" method="post">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" />
-  </form>
+    <form action="" method="post">
+      <div>
+        <label for="name">Enter your full name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="name">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <hr />
+      <h3>Your Book Request</h3>
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="titler" />
+      </div>
+
+      <div>
+        <label for="author">Author <small>(If known)</small></label>
+        <input type="text" id="author" name="author" />
+      </div>
+      <input class="form_btn" type="submit" value="Send" />
+      </div>
+    </form>
+  </div>
+
+  {% endblock %}
 </div>
-
-{% endblock %}

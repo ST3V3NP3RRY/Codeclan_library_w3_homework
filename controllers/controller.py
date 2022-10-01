@@ -58,3 +58,8 @@ def delete(title):
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route("/contact", methods=["POST"])
+def thanks():
+    return render_template("thanks.html")
