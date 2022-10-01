@@ -13,6 +13,7 @@ html {
 body {
   background-image: url(/static/images/book_background.jpg);
   background-position: center;
+  background-size: cover;
   font-size: 2.2rem;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -22,6 +23,10 @@ main {
   margin: 0 auto;
   border: 1px solid red;
   min-height: 70vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ----------- End of Main styles ------------- */
@@ -92,7 +97,7 @@ nav > ul > li > a:hover {
 
 /* ---- End of home Page styles ----- */
 
-/* ---- book and form styles ---- */
+/* ---- add book form styles ---- */
 
 .form_and_books_container {
   display: flex;
@@ -151,6 +156,14 @@ nav > ul > li > a:hover {
   margin-left: 1.5rem;
 }
 
+.bold_text {
+  font-weight: 700;
+}
+
+.checked_text {
+  color: rgb(123, 123, 123);
+}
+
 .date_align > input {
   margin-left: 1.5rem;
 }
@@ -180,7 +193,55 @@ label {
   cursor: pointer;
 }
 
-/* ---- End of book and form styles ---- */
+/* ---- End of add book form styles ---- */
+
+/* ---- Book list styles ----- */
+
+.books_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.book_container {
+  width: 38.5rem;
+  padding: 2rem;
+  background-color: rgb(252, 247, 241);
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.book_container > p {
+  margin-bottom: 1rem;
+}
+
+.view_and_delete_align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.view_book_btn {
+  background-color: rgb(39, 143, 25);
+  color: white;
+  border: none;
+  width: 15rem;
+  padding: 8px 16px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.view_book_btn:hover {
+  background-color: rgb(26, 102, 16);
+}
+
+/* ---- End of book list styles ---- */
 
 /* ---- Contact page styles ---- */
 

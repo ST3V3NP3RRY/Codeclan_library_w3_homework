@@ -52,29 +52,32 @@
     {% for book in books %}
 
     <div class="book_container">
-      <p class="book_title">Title: {{ book.title }}</p>
-      <p class="book_author">Author: {{ book.author }}</p>
-      <p class="book_genre">Genre: {{ book.genre }}</p>
+      <p>Title: <span class="bold_text">{{ book.title|title }}</span></p>
+      <p>Author: <span class="bold_text">{{ book.author|title }}</span></p>
+      <p>Genre: <span class="bold_text">{{ book.genre|title }}</span></p>
 
       {% if book.checked_out %}
-      <p>
+      <p class="checked_text">
         <i>
-          This book is checkout. return date: {{ book.return_date.strftime("%b
-          %d %Y") }}
+          Checked out: return date: {{ book.return_date.strftime("%b %d %Y") }}
         </i>
       </p>
       {% endif %}
+      <div class="view_and_delete_align">
+        <a class="view_book_btn" href="/books/{{books.index(book)}}"
+          >View book</a
+        >
 
-      <a href="/books/{{books.index(book)}}">View book</a>
-
-      <!--- Delete button --->
-      <form
-        class="form-inline"
-        action="/books/delete/{{ book.  title }}"
-        method="POST"
-      >
-        <input class="form_btn" type="submit" value="Delete" />
-      </form>
+        <!--- Delete button --->
+        <form
+          class="form-inline"
+          action="/books/delete/{{ book.  title }}"
+          method="POST"
+        >
+          <input class="form_btn" type="submit" value="Delete" />
+        </form>
+      </div>
+      <!---- view and delete align ----->
     </div>
     <!--- book_container end --->
 
