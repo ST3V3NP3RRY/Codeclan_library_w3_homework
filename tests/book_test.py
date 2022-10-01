@@ -35,22 +35,20 @@ class TestBook(unittest.TestCase):
         self.assertEqual(0, len(self.books))
 
     def test_can_add_book_to_list(self):
-        self.book.save_book(self.book)
+        self.book.save_book(self.book1)
         self.assertEqual(1, len(self.book.books))
 
     def test_can_remove_book_from_list(self):
-        self.book.save_book(self.book)
-        self.book.delete_book(self.book)
-        self.assertEqual(0, len(self.book.books))
+        self.book.save_book(self.book1)
+        self.book.delete_book(self.book1)
+        self.assertEqual(0, len(self.books))
 
-    @unittest.skip("delete this line to run the test")
+    def test_book_has_return_date(self):
+        self.assertEqual(2022, 10, 7, self.book.return_date)
+
     def test_can_remove_book_by_title(self):
         pass
 
     @unittest.skip("delete this line to run the test")
     def test_book_can_be_checked_out(self):
-        pass
-
-    @unittest.skip("delete this line to run the test")
-    def test_book_has_return_date(self):
         pass
