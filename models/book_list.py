@@ -14,3 +14,13 @@ books = [book1, book2, book3, book4, book5, book6]
 # REMEMBER - functions need to be tested
 def save_book(new_book):
     books.append(new_book)
+
+
+def delete_book(book_title):
+    book_to_delete = None
+    for book in books:
+        if book.title == book_title:
+            book_to_delete = book
+            break
+
+    books.remove(book_to_delete)

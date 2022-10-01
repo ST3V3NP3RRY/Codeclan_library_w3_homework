@@ -32,7 +32,7 @@
       <input id="genre" type="text" name="genre" />
     </div>
     <input class="submit_btn btn" type="submit" value="Add" />
-
+    
   </form>
 </div> <!--- form_container --->
 
@@ -44,7 +44,12 @@
         <p class="book_title">Title: {{ book.title }}</p>
         <p class="book_author">Author: {{ book.author }}</p>
         <p class="book_genre">Genre: {{ book.genre }}</p>
+        <a href="/books/{{books.index(book)}}">View book</a>
+        <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
+          <input type="submit" value="Delete">
+        </form>
       </div>
+      
       {% endfor %}
     </div>
 

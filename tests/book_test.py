@@ -33,3 +33,11 @@ class TestBook(unittest.TestCase):
         self.book.save_book(self.book)
         self.book.delete_book(self.book)
         self.assertEqual(0, len(self.book.books))
+
+    @unittest.skip("delete this line to run the test")
+    def test_can_remove_book_by_title(self):
+        pass
+
+    @unittest.skip("delete this line to run the test")
+    def test_book_can_be_checked_out(self):
+        pass

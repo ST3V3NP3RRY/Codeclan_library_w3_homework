@@ -30,6 +30,20 @@ def add_book():
     return redirect("/books")
 
 
+# Route to find a single book
+@app.route("/books/<index>")
+def single_book(index):
+    chosen_book = books[int(index)]
+    return render_template("single_book.html", book=chosen_book)
+
+
+# Route to delete a book
+@app.route("/books/delete/<title>", methods=["POST"])
+def delete(title):
+    delete_book(title)
+    return redirect("/books")
+
+
 # current books in library route
 @app.route("/contact")
 def contact():
