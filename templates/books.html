@@ -16,6 +16,11 @@
       <label for="author">Author:</label>
       <input id="author" type="text" name="author" />
     </div>
+    
+    <div>
+      <label for="genre">Genre:</label>
+      <input id="genre" type="text" name="genre" />
+    </div>
 
     <div>
       <label for="checked_out">Check Out:</label>
@@ -27,10 +32,7 @@
       />
     </div>
   
-    <div>
-      <label for="genre">Genre:</label>
-      <input id="genre" type="text" name="genre" />
-    </div>
+    
     <input class="submit_btn btn" type="submit" value="Add" />
     
   </form>
@@ -46,6 +48,7 @@
         <p class="book_genre">Genre: {{ book.genre }}</p>
         
         {% if book.checked_out %}
+          <!-- Add return by date below -->
           <p><i> Status: Sorry this book is out at the moment. </i></p>
           {% endif %}
         
