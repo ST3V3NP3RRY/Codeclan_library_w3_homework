@@ -5,11 +5,11 @@ from models.book_list import *
 
 class TestBook(unittest.TestCase):
     def setUp(self):
-        self.book = Book("Dune", "Frank Herbert", "Sci-Fi")
+        self.book = Book("Dune", "Frank Herbert", "Sci-Fi", True)
         self.book1 = Book(
-            "The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi"
+            "The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi", False
         )
-        self.book2 = Book("1984", "George Orwell", "Dystopian")
+        self.book2 = Book("1984", "George Orwell", "Dystopian", True)
 
         self.books = []
 

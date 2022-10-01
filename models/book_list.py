@@ -1,11 +1,11 @@
 from models.book import *
 
-book1 = Book("The Lord of the Rings", "J R R Tolkien", "Fantasy")
-book2 = Book("The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi")
-book3 = Book("Dune", "Frank Herbert", "Sci-Fi")
-book4 = Book("Wolf Hall", "Hilary Mantel", "Historical Fiction")
-book5 = Book("1984", "George Orwell", "Dystopian")
-book6 = Book("The Shining", "Stephen King", "Horror")
+book1 = Book("The Lord of the Rings", "J R R Tolkien", "Fantasy", True)
+book2 = Book("The Hitchhiker's Guide to The Galaxy", "Douglas Adams", "Sci-Fi", False)
+book3 = Book("Dune", "Frank Herbert", "Sci-Fi", True)
+book4 = Book("Wolf Hall", "Hilary Mantel", "Historical Fiction", False)
+book5 = Book("1984", "George Orwell", "Dystopian", True)
+book6 = Book("The Shining", "Stephen King", "Horror", True)
 
 
 books = [book1, book2, book3, book4, book5, book6]

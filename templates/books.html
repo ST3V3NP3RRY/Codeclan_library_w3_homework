@@ -17,15 +17,15 @@
       <input id="author" type="text" name="author" />
     </div>
 
-    <!-- <div>
-      <label for="checked_out">Checked Out?:</label>
+    <div>
+      <label for="checked_out">Check Out:</label>
       <input
         id="checked_out"
         type="checkbox"
         name="checked_out"
         value="False"
       />
-    </div> -->
+    </div>
   
     <div>
       <label for="genre">Genre:</label>
@@ -44,7 +44,13 @@
         <p class="book_title">Title: {{ book.title }}</p>
         <p class="book_author">Author: {{ book.author }}</p>
         <p class="book_genre">Genre: {{ book.genre }}</p>
-        <a href="/books/{{books.index(book)}}">View book</a>
+        
+        {% if book.checked_out %}
+          <p><i> Status: Sorry this book is out at the moment. </i></p>
+          {% endif %}
+        
+          <a href="/books/{{books.index(book)}}">View book</a>
+        
         <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
           <input type="submit" value="Delete">
         </form>

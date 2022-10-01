@@ -2,10 +2,11 @@
 # Extension - add a check_out property to book class
 # Remember - test class properties and any functions.
 class Book:
-    def __init__(self, title, author, genre):
+    def __init__(self, title, author, genre, checked_out):
         self.title = title
         self.author = author
         self.genre = genre
+        self.checked_out = checked_out
         self.books = []
 
     # Add a book to book list
@@ -16,5 +17,6 @@ class Book:
     def delete_book(self, book_name):
         self.books.remove(book_name)
 
+    # Count books in the list
     def count_books(self):
         return len(self.books)
