@@ -15,9 +15,15 @@ class Book:
         self.books.append(new_book)
 
     # Remove a book from the book list
-    def delete_book(self, book_name):
-        self.books.remove(book_name)
+    def delete_book(self, book):
+        self.books.remove(book)
 
     # Count books in the list
     def count_books(self):
         return len(self.books)
+
+    def find_book_by_title(self, book_title):
+        for book in self.books:
+            if book.title == book_title:
+                return book
+            return None
