@@ -16,18 +16,9 @@ book2 = Book(
     datetime.date(2022, 10, 7),
 )
 book3 = Book("Dune", "Frank Herbert", "Sci-Fi", True, datetime.date(2022, 10, 2))
-book4 = Book(
-    "Wolf Hall",
-    "Hilary Mantel",
-    "Historical Fiction",
-    False,
-    datetime.date(2022, 10, 19),
-)
-book5 = Book("1984", "George Orwell", "Dystopian", True, datetime.date(2022, 10, 7))
-book6 = Book("The Shining", "Stephen King", "Horror", True, datetime.date(2022, 10, 2))
 
 
-books = [book1, book2, book3, book4, book5, book6]
+books = [book1, book2, book3]
 
 # Function to add a new book to list
 # REMEMBER - functions need to be tested
