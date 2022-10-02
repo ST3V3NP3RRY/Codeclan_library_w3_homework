@@ -27,3 +27,8 @@ class Book:
             if book.title == book_title:
                 return book
             return None
+
+    def remove_book_by_title(self, book_title):
+        for book in self.books:
+            if book_title == book.title:
+                self.books.remove(book)

@@ -51,21 +51,24 @@ class TestBook(unittest.TestCase):
     def test_book_has_return_date(self):
         self.assertEqual(datetime.date(2022, 10, 14), self.book.return_date)
 
+    # ------------------------------------------------
+    # Not sure if I've written these tests correctly.
+    # ------------------------------------------------
     def test_find_book_by_title__book_found(self):
         self.book.save_book(self.book)
-        self.book.find_book_by_title("Dune")
-        self.assertEqual(self.book, self.book.find_book_by_title(self.book.title))
+        result = self.book.find_book_by_title("Dune")
+        self.assertEqual(self.book, result)
 
-    # This is wrong sort tomorrow
     def test_find_book_by_title__book_not_found(self):
         self.book.save_book(self.book)
-        self.book.find_book_by_title("The Great Gatsby")
-        self.assertEqual(None, self.book.find_book_by_title(self.book.title))
+        result = self.book.find_book_by_title("The Great Gatsby")
+        self.assertEqual(None, result)
 
-    @unittest.skip("delete this line to run the test")
     def test_can_remove_book_by_title(self):
-        pass
+        self.book.save_book(self.book)
+        self.book.save_book(self.book2)
+        self.book.remove_book_by_title("Dune")
+        self.assertEqual(1, len(self.book.books))
 
-    @unittest.skip("delete this line to run the test")
     def test_book_can_be_checked_out(self):
-        pass
+        self.assertEqual(True, self.book.checked_out)
