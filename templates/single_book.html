@@ -1,10 +1,21 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="book-container">
+<div class="single_book_container">
   <div class="book">
     <h2>{{ book.title }}</h2>
     <h3>{{ book.author }}</h3>
     <h4>{{ book.genre }}</h4>
+    <h4 class="summary_head">Summary</h4>
+
+    {% for summary in summary_list %}
+
+      {% if summary == books.index(book) %}
+       <p> {{ summary }} </p>
+      {% endif %}
+
+    </div>
+
+    {% endfor %}
   </div>
 </div>
 

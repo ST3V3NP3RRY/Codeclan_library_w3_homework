@@ -93,6 +93,7 @@ nav > ul > li > a:hover {
   height: 80vh;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 8rem;
 }
 
 /* ---- End of home Page styles ----- */
@@ -196,6 +197,10 @@ label {
   cursor: pointer;
 }
 
+.book_btn {
+  margin-top: 4rem;
+}
+
 /* ---- End of add book form styles ---- */
 
 /* ---- Book list styles ----- */
@@ -255,7 +260,8 @@ label {
 
 /* ---- Contact page styles ---- */
 
-.contact_container {
+.contact_container,
+.single_book_container {
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -264,7 +270,22 @@ label {
 }
 
 .contact_form_container {
-  max-width: 60rem;
+  max-width: 80rem;
+}
+
+.contact_headline {
+  margin-top: 2rem;
+}
+
+.contact_btn {
+  background-color: red;
+  color: white;
+  border: none;
+  height: auto;
+  padding: 8px 16px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
 }
 
 /* ---- End of Contact page styles ---- */
@@ -283,11 +304,21 @@ footer {
   align-items: center;
 }
 
-.social_icons {
-  display: flex;
+.zoom1,
+.zoom2,
+.zoom3,
+.zoom4 {
   gap: 1rem;
-  margin-top: 1rem;
+  margin: 1.5rem 2rem;
   font-size: 2.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.zoom1:hover,
+.zoom2:hover,
+.zoom3:hover,
+.zoom4:hover {
+  transform: scale(2);
 }
 
 .social_icons > a {

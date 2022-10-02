@@ -9,17 +9,17 @@
       <div class="form_textfields_container">
         <div class="flex_grow">
           <label for="title">Book title:</label>
-          <input id="title" type="text" name="title" />
+          <input id="title" type="text" name="title" required />
         </div>
 
         <div class="flex_grow">
           <label for="author">Author:</label>
-          <input id="author" type="text" name="author" />
+          <input id="author" type="text" name="author" required />
         </div>
 
         <div class="flex_grow">
           <label for="genre">Genre:</label>
-          <input id="genre" type="text" name="genre" />
+          <input id="genre" type="text" name="genre" required />
         </div>
       </div>
       <!--- end of form_textfields_container --->
@@ -71,7 +71,7 @@
         <!--- Delete button --->
         <form
           class="form-inline"
-          action="/books/delete/{{ book.  title }}"
+          action="/books/delete/{{ book.title }}"
           method="POST"
         >
           <input class="form_btn" type="submit" value="Delete" />

@@ -15,6 +15,7 @@ book2 = Book(
     False,
     datetime.date(2022, 10, 7),
 )
+
 book3 = Book("Dune", "Frank Herbert", "Sci-Fi", True, datetime.date(2022, 10, 2))
 
 

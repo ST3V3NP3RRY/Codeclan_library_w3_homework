@@ -27,6 +27,11 @@ def add_book():
     split_date = date.split("-")
     # Reassign date variables value
     date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
+    # -------------------------------------------------------------------------------------
+    # Question1: There's a bug in my code. When the user inputs a book with a date left blank
+    # I get a ValueError: invalid literal for int() with base 10: '' which I assume is because
+    # I'm passing in an empty string. Is there a way to fix this?
+    # -------------------------------------------------------------------------------------
 
     new_book = Book(
         title=title,
@@ -43,7 +48,23 @@ def add_book():
 # Route to find a single book
 @app.route("/books/<index>")
 def single_book(index):
+
+    # -------------------------------------------------------------------------------------
+    # Question2: How could I output a summary of each book on the single book page based on
+    # the index of the books list?
+    # -------------------------------------------------------------------------------------
+
+    summary_list = [
+        # LOTR summary ---------------------------------------------------------------------
+        "At 33, the age of adulthood among hobbits, Frodo Baggins receives a magic Ring of Invisibility from his uncle Bilbo. Frodo, a Christlike figure, learns that the ring has the power to control the entire world and, he discovers, to corrupt its owner. A fellowship of hobbits, elves, dwarfs, and men is formed to destroy the ring by casting it into the volcanic fires of the Crack of Doom, where it was forged. They are opposed on their harrowing mission by the evil Sauron and his Black Riders.",
+        # HGTTG summary -------------------------------------------------------------------
+        "The Hitchhiker's Guide to the Galaxy begins with contractors arriving at Arthur Dent's house, in order to demolish it to make way for a bypass. His friend, Ford Prefect, arrives while Arthur is lying in front of the bulldozers, to stop them from demolishing it. He tries to explain to Arthur that he is actually from a planet somewhere in the vicinity of Betelgeuse and that the Earth is about to be demolished. The Vogons, an alien race, intend to destroy Earth to make way for a hyperspace bypass.",
+        # Dune summary -----------------------------------------------------------------------
+        "Dune is a literary piece of science fiction that tells the story of humanity thousands of years into the future. In the novel, humanity becomes so advanced that it spreads across the known universe. With the spread of humans, noble houses are formed, with each governing a planetary system.Dune focuses on the story of Paul Atreides, the young heir to House Atreides whose father gets assigned by Shaddam IV, the Emperor, to govern the planet Arrakis, a desert world with a crucial commodity called Melange. Obeying the command, Paul's father, Leto, decides to leave Caladan, his home planet, for Arrakis. However, Leto is sure his enemies are plotting against him.",
+    ]
+
     chosen_book = books[int(index)]
+
     return render_template("single_book.html", book=chosen_book)
 
 
