@@ -26,7 +26,10 @@ def add_book():
     date = request.form["date"]
     split_date = date.split("-")
     # Reassign date variables value
-    date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
+    if date == "":
+        pass
+    else:
+        date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
     # -------------------------------------------------------------------------------------
     # Question1: There's a bug in my code. When the user inputs a book with a date left blank
     # I get a ValueError: invalid literal for int() with base 10: '' which I assume is because
