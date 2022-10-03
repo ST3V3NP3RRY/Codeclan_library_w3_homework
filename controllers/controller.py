@@ -34,6 +34,8 @@ def add_book():
     # Question1: There's a bug in my code. When the user inputs a book with a date left blank
     # I get a ValueError: invalid literal for int() with base 10: '' which I assume is because
     # I'm passing in an empty string. Is there a way to fix this?
+    # UPDATE - ISSUE RESOLVED:
+    # Wrapped the date variable in an if statement. Is that the best approach?
     # -------------------------------------------------------------------------------------
 
     new_book = Book(
